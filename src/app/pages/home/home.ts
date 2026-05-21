@@ -12,4 +12,9 @@ import { RouterLink, RouterLinkActive } from '@angular/router';
   `,
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class Home {}
+export class Home {
+  constructor() {
+    console.log("Hola");
+    
+  }
+}
