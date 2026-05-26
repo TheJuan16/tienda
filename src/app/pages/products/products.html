@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tabla con Botones</title>
+    <style>
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-family: Arial, sans-serif;
+            font-size: 16px;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 12px 15px;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #333; /* Color oscuro para el encabezado */
+            color: white;
+        }
+
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+
+        tr:hover {
+            background-color: #f1f1f1;
+        }
+
+        /* --- Estilos para el Botón --- */
+        .btn-accion {
+            background-color: #007BFF; /* Azul */
+            color: white;
+            border: none;
+            padding: 8px 12px;
+            cursor: pointer;
+            border-radius: 4px;
+            font-size: 14px;
+            transition: background 0.3s ease;
+        }
+
+        /* Efecto al pasar el mouse por el botón */
+        .btn-accion:hover {
+            background-color: #0056b3; /* Azul más oscuro */
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Gestión de Usuarios</h2>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nombre</th>
+                <th>Rol</th>
+                <th>Acción</th> </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>1</td>
+                <td>Ana Gómez</td>
+                <td>Administrador</td>
+                <td><button class="btn-accion" onclick="alert('Editando a Ana')">Editar</button></td>
+            </tr>
+            <tr>
+                <td>2</td>
+                <td>Carlos Pérez</td>
+                <td>Editor</td>
+                <td><button class="btn-accion" onclick="alert('Editando a Carlos')">Editar</button></td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>María López</td>
+                <td>Usuario</td>
+                <td><button class="btn-accion" onclick="alert('Editando a María')">Editar</button></td>
+            </tr>
+        </tbody>
+    </table>
+
+</body>
+</html>
