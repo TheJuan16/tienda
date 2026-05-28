@@ -54,22 +54,41 @@
             outline: none;
         }
 
-        /* Estilo del botón de enviar */
-        .btn-guardar {
+        /* Estilo general para los botones del formulario */
+        .btn-guardar, .btn-regresar {
             width: 100%;
-            background-color: #28a745; /* Verde */
-            color: white;
             padding: 12px;
             border: none;
             border-radius: 4px;
             font-size: 16px;
-            cursor: pointer;
             font-weight: bold;
+            cursor: pointer;
             transition: background 0.3s ease;
+            text-align: center;
+            box-sizing: border-box;
+            display: block;
+        }
+
+        /* Estilo del botón de enviar (Verde) */
+        .btn-guardar {
+            background-color: #28a745;
+            color: white;
+            margin-bottom: 10px; /* Separación con el botón de abajo */
         }
 
         .btn-guardar:hover {
-            background-color: #218838; /* Verde más oscuro */
+            background-color: #218838;
+        }
+
+        /* Estilo del botón de regresar (Gris) */
+        .btn-regresar {
+            background-color: #6c757d;
+            color: white;
+            text-decoration: none; /* Quita el subrayado del enlace */
+        }
+
+        .btn-regresar:hover {
+            background-color: #5a6268;
         }
     </style>
 </head>
@@ -78,22 +97,18 @@
     <div class="form-contenedor">
         <h2>Nuevo Producto</h2>
 
-        <!-- Formulario -->
         <form action="#" method="POST">
 
-            <!-- Nombre del Producto -->
             <div class="form-grupo">
                 <label for="nombre">Nombre del Producto:</label>
                 <input type="text" id="nombre" name="nombre" placeholder="Ej. Camiseta Algodón" required>
             </div>
 
-            <!-- Precio -->
             <div class="form-grupo">
                 <label for="precio">Precio ($):</label>
                 <input type="number" id="precio" name="precio" step="0.01" placeholder="0.00" required>
             </div>
 
-            <!-- Categoría -->
             <div class="form-grupo">
                 <label for="categoria">Categoría:</label>
                 <select id="categoria" name="categoria" required>
@@ -105,14 +120,14 @@
                 </select>
             </div>
 
-            <!-- Descripción -->
             <div class="form-grupo">
                 <label for="descripcion">Descripción:</label>
                 <textarea id="descripcion" name="descripcion" rows="3" placeholder="Breve descripción del producto..."></textarea>
             </div>
 
-            <!-- Botón de Envío -->
             <button type="submit" class="btn-guardar">Guardar Producto</button>
+
+            <a href="home" class="btn-regresar">Regresar a Home</a>
 
         </form>
     </div>
